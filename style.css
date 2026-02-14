@@ -37,7 +37,7 @@ body {
 }
 @media (max-width: 640px) {
 .slogan{
-  font-size: 2em;
+  font-size: 2.2em;
 }
 }
   
@@ -234,3 +234,4 @@ footer {
   z-index: 10;
 
 }
+
