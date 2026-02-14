@@ -1,0 +1,235 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::selection {
+  color: #fff;
+  background-color: #0092ff;
+}
+body {
+  font-family: "Red Hat Display", "Atkinson Hyperlegible", sans-serif;
+  background-color: #1874B9 !important;
+  color: #fff;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+.kombi-font-logo{
+  font-family: "Bebas Neue", sans-serif;
+}
+.kombi-font-title{
+  font-family: "Unbounded", sans-serif;
+  font-weight: 100;
+}
+.kombi-font-text{
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.2em !important;
+}
+.kombi-font-text-small {
+  font-size: 0.7em !important;
+}
+
+.slogan{
+  font-size: 3em;
+  line-height: 1;
+}
+@media (max-width: 640px) {
+.slogan{
+  font-size: 2.4em;
+}
+}
+  
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+}
+.social-icon, .location-icon{
+  width: 60px;
+  height: 60px;
+  display: block;
+}
+
+.social-links a:hover .location-icon .bg-part {
+  fill: #4DC2F7;   /* ← your hover hex – any hex works here */
+}
+.social-links a:hover .location-icon .color-part {
+  fill: #fff;   /* ← your hover hex – any hex works here */
+}
+
+.social-links a:hover .instagram-icon .bg-part {
+  fill: #4DC2F7;   /* ← your hover hex – any hex works here */
+}
+.social-links a:hover .instagram-icon .color-part {
+  fill: #fff;   /* ← your hover hex – any hex works here */
+}
+.social-links a:hover .facebook-icon .bg-part {
+  fill: #4DC2F7;   /* ← your hover hex – any hex works here */
+}
+.social-links a:hover .facebook-icon .color-part {
+  fill: #fff;   /* ← your hover hex – any hex works here */
+}
+
+/* Photo hero – full bleed on every screen size */
+.hero-photo {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);   /* centers the 100vw container */
+  margin-right: calc(50% - 50vw);
+  height: 100vw;                    /* adjust to taste: 80vh–110vh */
+  }
+
+/* Cap content width on larger screens */
+.hero-photo .hero-image {
+  width: 100%;
+  height: 35vw;
+  object-fit: cover;
+  object-position: center 70%;     /* your upward shift – tune as needed */
+  display: block;
+}
+
+/* SVG section – content capped, but section itself full-width */
+.hero-draw {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 40px 15px 40px;
+  text-align: center;
+}
+
+.hero-illustration {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── Responsive adjustments ─────────────────────────────── */
+@media (max-width: 640px) {
+  .hero-photo {
+    height: 80vh;                  /* shorter on mobile */
+  }
+  .hero-draw {
+    padding: 30px 0px 30px;
+  }
+}
+
+@media (min-width: 641px) {
+  .hero-photo {
+    height: clamp(600px, 80vh, 900px);  /* nice range on tablets/desktops */
+  }
+}
+
+.spacer{
+  height: 100px !important;
+}
+
+.kombi-florence {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 30px 15px;
+  text-align: center;
+}
+
+.kombi-florence img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+header {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 55px 0 40px 0;
+  background-color: #1874B9;
+  z-index: 10;
+}
+html, body {
+  height: 100%;
+}
+header svg, header img {
+  max-height: 160px;
+}
+footer svg, footer img {
+  max-height: 40px;
+}
+.kombi-title{
+  display: none;
+}
+/* Ensure content stretches */
+.content {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1400px !important;
+}
+
+button{
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+  margin-top: 0.5em;
+  padding: 15px;
+  border: 2px solid #f2f2f2;
+  border-radius: 15px;
+  background-color: #f2f2f2;
+}
+button:hover{
+  text-decoration: underline;
+  color: #000;
+  padding: 15px;
+  border: 2px solid #fff509;
+  border-radius: 15px;
+  background-color: #fff509;
+  cursor: pointer;
+}
+.hover-arrow::after {
+  content: "";
+  transition: content 0.2s ease;
+}
+
+.hover-arrow:hover::after {
+  content: " >";
+}
+.div_spacer{
+  min-height: 1000px;
+}
+
+main {
+  flex: 0 0 100%;
+  padding: 2em;
+  background-color: #1874B9;
+}
+section.main{
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    flex: 0 0 100%;
+    padding: 2em;
+    background-color: #1874B9;
+  }
+}
+
+a:target{
+  border-radius: 15px;
+  scroll-margin-top: 150px;
+  outline-color: #1f3cee;
+}
+
+footer {
+  flex-shrink: 0;
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 15px 10px;
+  background-color: #1874B9;
+  color: #fff;
+  font-size: 0.9rem;
+  z-index: 10;
+}
