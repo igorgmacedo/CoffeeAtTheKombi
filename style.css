@@ -37,7 +37,7 @@ body {
 }
 @media (max-width: 640px) {
 .slogan{
-  font-size: 2.2em;
+  font-size: 1.8em;
 }
 }
   
@@ -122,11 +122,11 @@ body {
 }
 
 .spacer{
-  height: 100px !important;
+  height: 2em !important;
 }
 
 .kombi-florence {
-  max-width: 400px;
+  max-width: 320px;
   margin: 0 auto;
   padding: 30px 15px;
   text-align: center;
@@ -227,11 +227,9 @@ footer {
   display: block;
   width: 100%;
   text-align: center;
-  padding: 15px 10px;
+  padding: 25px 15px;
   background-color: #1874B9;
   color: #fff;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   z-index: 10;
-
 }
-
