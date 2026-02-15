@@ -139,6 +139,14 @@ body {
   display: block;
 }
 
+img.kombi-florence, img.hero-illustration {
+  pointer-events: none;
+  user-select: none;
+  touch-action: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+}
+
 header {
   display: block;
   width: 100%;
@@ -233,3 +241,4 @@ footer {
   font-size: 0.75rem;
   z-index: 10;
 }
+
