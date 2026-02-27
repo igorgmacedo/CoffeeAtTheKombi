@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://coffeeatthekombi.com.au/sitemap.xml
