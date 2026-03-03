@@ -30,6 +30,11 @@ body {
 .kombi-font-text-small {
   font-size: 0.7em !important;
 }
+.address-text{
+  line-height: 1.4 !important;
+  font-size: 1em !important;
+  margin-bottom: 1em !important;
+}
 
 .slogan{
   font-size: 3em;
@@ -241,5 +246,6 @@ footer {
   font-size: 0.75rem;
   z-index: 10;
 }
+
 
 
