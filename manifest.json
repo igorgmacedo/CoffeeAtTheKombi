@@ -1,0 +1,21 @@
+{
+  "short_name": "Coffee at the Kombi",
+  "name": "Coffee at the Kombi",
+  "icons": [
+    {
+      "src": "/images/favicon-vector.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/images/favicon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/favicon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ] 
+}
