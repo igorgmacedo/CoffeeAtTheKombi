@@ -1,3 +1,46 @@
+/* BEBAS NEUE */
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('fonts/BebasNeue-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* RED HAT DISPLAY */
+@font-face {
+  font-family: 'Red Hat Display';
+  src: url('fonts/RedHatDisplay-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Red Hat Display';
+  src: url('fonts/RedHatDisplay-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Red Hat Display';
+  src: url('fonts/RedHatDisplay-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* UNBOUNDED */
+@font-face {
+  font-family: 'Unbounded';
+  src: url('fonts/Unbounded-ExtraLight.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Base Styles */
 * {
   margin: 0;
@@ -13,9 +56,8 @@ body {
   background-color: #1874B9 !important;
   color: #fff;
   line-height: 1.6;
-  display: flex;
-  flex-direction: column;
 }
+
 .kombi-font-logo{
   font-family: "Bebas Neue", sans-serif;
 }
@@ -65,7 +107,6 @@ body {
 .social-links a:hover .location-icon .color-part {
   fill: #fff;   /* ← your hover hex – any hex works here */
 }
-
 .social-links a:hover .instagram-icon .bg-part {
   fill: #4DC2F7;   /* ← your hover hex – any hex works here */
 }
@@ -79,29 +120,18 @@ body {
   fill: #fff;   /* ← your hover hex – any hex works here */
 }
 
-/* Photo hero – full bleed on every screen size */
-.hero-photo {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);   /* centers the 100vw container */
-  margin-right: calc(50% - 50vw);
-  height: 100vw;                    /* adjust to taste: 80vh–110vh */
-  }
-
-/* Cap content width on larger screens */
-.hero-photo .hero-image {
-  width: 100%;
-  height: 35vw;
-  object-fit: cover;
-  object-position: center 70%;     /* your upward shift – tune as needed */
-  display: block;
-}
-
 /* SVG section – content capped, but section itself full-width */
 .hero-draw {
   max-width: 950px;
   margin: 0 auto;
   padding: 40px 15px 40px;
   text-align: center;
+}
+/* ── Responsive adjustments ─────────────────────────────── */
+@media (max-width: 640px) {
+  .hero-draw {
+    padding: 30px 0px 30px;
+  }
 }
 
 .hero-illustration {
@@ -110,20 +140,31 @@ body {
   display: block;
 }
 
-/* ── Responsive adjustments ─────────────────────────────── */
-@media (max-width: 640px) {
-  .hero-photo {
-    height: 80vh;                  /* shorter on mobile */
-  }
-  .hero-draw {
-    padding: 30px 0px 30px;
-  }
+.hero-photo {
+  width: 100%;
+  overflow: hidden;      /* crop the image */
+  position: relative;
+  aspect-ratio: 3 / 1;   /* controls the cinematic shape */
 }
 
-@media (min-width: 641px) {
+/* image stays fully responsive */
+.hero-photo .hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transform: translateY(-22%); /* cinematic crop */
+}
+
+@media (max-width: 640px) {
   .hero-photo {
-    height: clamp(600px, 80vh, 900px);  /* nice range on tablets/desktops */
+    aspect-ratio: 2.2 / 1; /* taller crop on mobile */
   }
+  .hero-photo .hero-image {
+    transform: translateY(-5%);
+  }
+}
+.hero-photo .hero-image {
+  transition: transform 0.3s ease-out;
 }
 
 .spacer{
@@ -172,6 +213,7 @@ footer svg, footer img {
 .kombi-title{
   display: none;
 }
+
 /* Ensure content stretches */
 .content {
   display: flex;
@@ -285,7 +327,3 @@ footer {
   font-size: 0.75rem;
   z-index: 10;
 }
-
-
-
-
