@@ -5,6 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Coffee at the Kombi • South Brisbane QLD</title>
   <link rel="stylesheet" href="style.css">
+  
+  <link rel="preload" href="fonts/BebasNeue-Regular.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/RedHatDisplay-Regular.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/Unbounded-ExtraLight.woff2" as="font" type="font/woff2">
+  <link
+    rel="preload"
+    as="image"
+    href="images/coffee_at_the_kombi_panorama_south_bank_v3io-2979.jpg"
+    imagesrcset="
+      images/coffee_at_the_kombi_panorama_south_bank_v3iox-800.webp 800w,
+      images/coffee_at_the_kombi_panorama_south_bank_v3iox-1400.webp 1400w,
+      images/coffee_at_the_kombi_panorama_south_bank_v3iox-2000.webp 2000w
+    "
+    imagesizes="100vw"
+  />
+  
   <link rel="icon" href="images/coffeeatthekombi_favicon.svg" type="image/svg+xml">
   <link rel="icon" href="images/favicon.png" sizes="64x64" type="image/png">
   <link rel="shortcut icon" href="favicon.ico" sizes="32x32" type="image/x-icon">
@@ -24,10 +40,11 @@
   <meta property="og:type" content="website">
   <meta property="og:image:alt" content="Coffee at the Kombi logo">
   
+  <!-- DEPRECATED due to extra increase of website speed load performance -->
   <!-- Google Fonts: Bebas Neue (regular/400), Unbounded (extra light/100), Red Hat Display (regular/400 + others if needed) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Red+Hat+Display:wght@400;500;600&family=Unbounded:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Red+Hat+Display:wght@400;500;600&family=Unbounded:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> -->
   
   <script type="application/ld+json">
     {
@@ -70,12 +87,25 @@
     </a>
   </header>
   
-<section class="hero hero-photo">
-  <img
-    src="images/coffee_at_the_kombi_panorama_south_bank_02.jpg"
-    alt="Coffee at the Kombi mobile specialty coffee van panorama at South Bank Brisbane"
-    class="hero-image" loading="eager">
-</section>
+  <section class="hero hero-photo">
+    <picture>
+      <source
+        srcset="
+          images/coffee_at_the_kombi_panorama_south_bank_v3iox-800.webp 800w,
+          images/coffee_at_the_kombi_panorama_south_bank_v3iox-1400.webp 1400w,
+          images/coffee_at_the_kombi_panorama_south_bank_v3iox-2000.webp 2000w
+        "
+        type="image/webp"
+      >
+      <img
+        src="images/coffee_at_the_kombi_panorama_south_bank_v3io-2979.jpg"
+        alt="Coffee at the Kombi mobile specialty coffee van panorama at South Bank Brisbane"
+        class="hero-image"
+        loading="eager"
+        decoding="async"
+      >
+    </picture>
+  </section>
 
 <div class="content">
   <main>
@@ -131,6 +161,7 @@
             Our trading hours may change due to <strong>severe weather [constant rain or wind]</strong>. Check our Instagram Stories for daily updates.
           </span>
         </p>
+
       </section>
     </main>
   </div>
@@ -156,5 +187,3 @@
 </body>
 
 </html>
-
-
