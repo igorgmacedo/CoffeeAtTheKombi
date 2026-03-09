@@ -70,7 +70,16 @@ body {
   font-size: 1.2em !important;
 }
 .kombi-font-text-small {
-  font-size: 0.7em !important;
+  font-size: 0.95em !important;
+}
+.kombi-font-text-info {
+  font-size: 0.8em !important;
+  font-family: monospace, sans-serif;
+  font-weight: 400 !important;
+}
+.info-bolder{
+  font-family: monospace, sans-serif;
+  font-weight: 900 !important;
 }
 .address-text{
   line-height: 1.4 !important;
@@ -288,7 +297,7 @@ section.main{
   border-radius: 6px;
   font-size: 0.8rem;
   line-height: 1.2;
-  width: 220px;
+  width: 250px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   transition: opacity 0.2s ease;
   z-index: 10;
