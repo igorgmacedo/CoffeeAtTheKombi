@@ -1,6 +1,13 @@
 {
   "short_name": "Coffee at the Kombi",
   "name": "Coffee at the Kombi",
+  "description": "Mobile specialty coffee van at South Bank Brisbane, serving freshly brewed coffee daily.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#1874B9",
+  "theme_color": "#1874B9",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "/images/favicon-vector.svg",
