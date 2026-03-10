@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coffee at the Kombi • South Brisbane QLD</title>
+  <title>Coffee at the Kombi | South Brisbane QLD</title>
   <link rel="stylesheet" href="style.css">
   
   <link rel="preload" href="fonts/BebasNeue-Regular.woff2" as="font" type="font/woff2">
@@ -87,7 +87,7 @@
   <header>
     <h1 class="kombi-title">Coffee at the Kombi</h1>
     <a href="#">
-    <img src="images/coffeeatthekombi_logo_01.svg" alt="Coffee at the Kombi Logo">
+    <img class="kombi-logo" src="images/coffeeatthekombi_logo_01.svg" alt="Coffee at the Kombi Logo">
     </a>
   </header>
   
@@ -184,11 +184,15 @@
   </section>
 
   <footer>
-    <p class="kombi-font-text">Copyright &copy; 2026 • <strong>COFFEE AT THE KOMBI</strong> • All Rights Reserved.</p>
-    <!-- <p> &copy; Copyright 2025<script>new Date().getFullYear()>2024&&document.write("-"+new Date().getFullYear());</script></p> -->
-
+    <p class="kombi-font-text">&copy; Copyright <span id="year-range">2026</span> • <strong>COFFEE AT THE KOMBI</strong> • All Rights Reserved.</p>
   </footer>
-  
-</body>
+  <script>
+    const startYear = 2026;
+    const currentYear = new Date().getFullYear();
 
+    if (currentYear > startYear) {
+      document.getElementById("year-range").textContent = `${startYear}–${currentYear}`;
+    }
+  </script>
+</body>
 </html>
