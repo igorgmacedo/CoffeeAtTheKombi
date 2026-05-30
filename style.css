@@ -347,15 +347,15 @@ footer {
   text-align: center;
   font-weight: 400 !important;
   z-index: 9999;
-  font-family: "Atkinson Hyperlegible" !important;
+  font-family: monospace, sans-serif !important;
 }
 .info-bolder {
   font-weight: 900 !important;
-  font-family: "Atkinson Hyperlegible" !important;
+  font-family: monospace, sans-serif !important;
 }
 .info-under {
   text-decoration: underline !important;
-  font-family: "Atkinson Hyperlegible" !important;
+  font-family: monospace, sans-serif !important;
 }
 .info-mobile-text {
   display: none !important;
