@@ -338,20 +338,33 @@ footer {
 }
 .announcement {
   position: fixed;
-  bottom: 0;
+  bottom: 0; /* change to top: 0 if you want it at the top */
   left: 0;
   width: 100vw;
   background: #ffcc00;
   color: #000;
   padding: 1rem;
   text-align: center;
-  font-weight: 600 !important;
+  font-weight: 400 !important;
   z-index: 9999;
+  font-family: "Atkinson Hyperlegible" !important;
 }
 .info-bolder {
   font-weight: 900 !important;
-  font-size: 1.2rem;
+  font-family: "Atkinson Hyperlegible" !important;
 }
 .info-under {
   text-decoration: underline !important;
+  font-family: "Atkinson Hyperlegible" !important;
+}
+.info-mobile-text {
+  display: none !important;
+}
+@media (max-width: 720px) {
+  .info-desktop-text {
+    display: none !important;
+  }
+  .info-mobile-text {
+    display: inline !important;
+  }
 }
