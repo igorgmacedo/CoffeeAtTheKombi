@@ -336,9 +336,10 @@ footer {
   font-size: 0.75rem;
   z-index: 10;
 }
+/*
 .announcement {
   position: fixed;
-  bottom: 0; /* change to top: 0 if you want it at the top */
+  bottom: 0;
   left: 0;
   width: 100vw;
   background: #ffcc00;
@@ -368,3 +369,4 @@ footer {
     display: inline !important;
   }
 }
+*/
